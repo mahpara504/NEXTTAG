@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Nextag</title>
+    <link rel="shortcut icon" href="logo/Logo Image.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #FAEFE3;
+        }
+
+        header {
+            background-color: #8A6B45;
+            justify-content: center;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            font-weight: 300;
+        }
+
+        .navbar-brand h1 {
+            color: #F5F5DC;
+            font-size: 3rem;
+        }
+
+        .nav-link {
+            color: #F5F5DC;
+            font-weight: 400;
+        }
+
+        .me-auto {
+            font-size: 1.5rem;
+        }
+
+        .ms-auto {
+            font-size: 1.2rem;
+        }
+
+        .nav-link:hover {
+            color: #272725;
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .navbar i {
+            color: #F5F5DC;
+        }
+
+        .navbar i:hover {
+            color: #1A1A1A;
+        }
+
+        #menuBtn {
+            color: white;
+        }
+
+        .side-navbar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            z-index: 1000;
+            margin-top: 90px;
+            top: 0;
+            right: -250px;
+            background-color: rgba(138, 108, 58, 0.8);
+            color: #F5F5DC;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .side-navbar.active {
+            right: 0;
+        }
+
+        .close-btn {
+            background: none;
+            color: #272725;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .dropdown-menu {
+            background-color: #8A6B45;
+            color: #F5F5DC;
+            text-align: center;
+        }
+
+        .dropdown-item {
+            color: #F5F5DC;
+        }
+
+        .dropdown-item:hover {
+            color: #272725;
+            background-color: #ad916e;
+        }
+
+        .nav-item:hover {
+            color: #272725;
+        }
+
+        .nav-item.active {
+            color: #272725;
+        }
+
+        .bi {
+            color: #8A6B45;
+        }
+
+        .bi:hover {
+            color: #4b4747;
+        }
+
+        .container h1 {
+            text-shadow: 2px 2px 10px rgba(224, 193, 167, 0.2);
+            color: #444;
+            font-size: 3rem;
+        }
+
+        .hero-section {
+            margin-top: 100px;
+            color: #343434;
+        }
+
+        #hero {
+            color: black;
+        }
+
+        img {
+            width: 430px;
+            height: 430px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        .text {
+            border-radius: 8px;
+            padding: 50px;
+            background-color: #f7f4f4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #services {
+            background-color: #8A6B45;
+            color: rgb(243, 229, 202);
+        }
+
+        .card {
+            color: #343434;
+            background-color: white;
+        }
+
+        .btn {
+            border: 2px solid #8A6B45;
+            border-radius: 8px;
+            background-color: #8A6B45;
+            color: white;
+        }
+
+        footer {
+            background-color: #1A1A1A;
+            color: wheat;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+
+            .navbar {
+                display: flex;
+            }
+
+            .navbar-brand h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-link {
+                font-weight: 200;
+            }
+
+            .ms-auto {
+                font-size: 1rem;
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            .me-auto {
+                display: none !important;
+            }
+
+            .side-navbar.active {
+                margin-top: 70px;
+                height: 90%;
+            }
+
+            .hero-section {
+                margin-top: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Left Links -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href=""><i id="toggleIcon"
+                                class="bi bi-heart icon"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#home"><i class="bi bi-house-fill"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-person-fill"></i></a>
+                    </li>
+                </ul>
+                <!-- Logo in Center -->
+                <a class="navbar-brand mx-auto" href="index.html">
+                    <h1 style="color: #F5F5DC;">NEXTAG</h1>
+                </a>
+                <!-- Right Links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sideNavbar"><i class="bi bi-list btn"
+                                id="menuBtn"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-bag-fill"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="side-navbar" id="sideNavbar">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <h3>NEXTAG</h3>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#home"><i class="bi bi-circle"></i> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="brandsDropdown" data-bs-toggle="dropdown"><i
+                        class="bi bi-circle"></i> Brands</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="valentino.html">Valentino</a></li>
+                    <li><a class="dropdown-item" href="saint laurent.html">Yves Saint Laurent</a></li>
+                    <li><a class="dropdown-item" href="gucci.html">Gucci</a></li>
+                    <li><a class="dropdown-item" href="dolce and gabana.html">Dolce & Gabbana</a></li>
+                    <li><a class="dropdown-item" href="burberry.html">Burberry</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="products.html" id="brandsDropdown"
+                    data-bs-toggle="dropdown"><i class="bi bi-circle"></i> Products</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="products.html#bags-section">Bags</a></li>
+                    <li><a class="dropdown-item" href="products.html#wallets-section">Wallets</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="compare.html"><i class="bi bi-circle"></i> Comparison</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"><i class="bi bi-circle"></i> Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html#services"><i class="bi bi-circle"></i> Services</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <section id="about">
+
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="mt-5 mb-3">About Us</h1>
+                <p id="hero" class="text-align-center">Stay stylish | Stay organized | Stay inspired</p>
+                <p>Welcome to NEXTAG, where style meets functionality. We specialize in providing
+                    premium-quality wallets and bags that blend timeless elegance with modern convenience.</p>
+                <a href="index.html" class="btn btn-lg">Visit our Home Page</a>
+                <a href="contact.html"><i class="bi bi-person fs-4 mx-2"></i></a>
+            </div>
+        </div> <br>
+
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text">
+                    <h2>Welcome to NEXTAG</h2>
+                    <p>Your one-stop destination for stylish purses, wallets, and accessories. With a
+                        commitment to quality and innovation, we offer a diverse collection that caters to every style,
+                        occasion, and need.
+                    </p> <br> <br>
+                    <p>At NEXTAG, we believe fashion should be accessible and convenient. That’s why we’ve launched this
+                        platform to bring your favourite brand collections right to your fingertips. Explore our website
+                        to discover
+                        premium products, detailed descriptions, and the latest trends in accessories—all from the
+                        comfort
+                        of your home.</p>
+                </div>
+                <!-- Image Column -->
+                <div class="col-lg-6 col-md-12">
+                    <img src="images/8054942242112-02_uvimy9wtq9kv2xft.jpg" alt="">
+                </div>
+            </div>
+        </div> <br>
+
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center animate-text" style="font-weight: 600;">Our Services</h2>
+            <p class="text-center mb-5 animate-text">
+                At NEXTAG, we go beyond just offering stylish wallets and bags—we provide a seamless
+                shopping experience with premium services designed for your convenience.
+            </p>
+            <div class="row text-center">
+                <!-- Service 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body">
+                            <i class="bi bi-hand-thumbs-up-fill display-6 mb-4"></i>
+                            <h5 class="card-title"><b>&check;</b> Customer-Centric Approach</h5>
+                            <p class="card-text">
+                                Your satisfaction is our top priority, and we strive to offer the best service possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body">
+                            <i class="bi bi-handbag-fill display-6 mb-4"></i>
+                            <h5 class="card-title"><b>&check;</b> Worldwide Shipping</h5>
+                            <p class="card-text">
+                                No matter where you are, we deliver right to your doorstep with secure and reliable
+                                global shipping options.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body">
+                            <i class="bi bi-question-circle-fill display-6 mb-4"></i>
+                            <h5 class="card-title"><b>&check;</b> Dedicated Customer Support</h5>
+                            <p class="card-text">
+                                Have a question or need assistance? Our friendly customer support team is here to help
+                                you with any inquiries regarding orders, products, or services.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>NEXTAG</h2>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 NEXTAG. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("toggleIcon").addEventListener("click", function () {
+            this.classList.toggle("bi-heart");
+            this.classList.toggle("bi-heart-fill");
+        });
+
+        document.getElementById("menuBtn").addEventListener("click", function () {
+            document.getElementById("sideNavbar").classList.add("active");
+        });
+
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("sideNavbar").classList.remove("active");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

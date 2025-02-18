@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #382711; */
+    background-color: #faf2e8;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+header {
+    background-color: #382711;
+    justify-content: center;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    font-weight: 300;
+}
+
+.navbar-brand h1 {
+    color: #F5F5DC;
+    font-size: 3rem;
+}
+
+.nav-link {
+    color: #F5F5DC;
+    font-weight: 400;
+}
+
+.me-auto {
+    font-size: 1.5rem;
+}
+
+.ms-auto {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #F5F5DC;
+}
+
+#menuBtn {
+    color: white;
+}
+
+.side-navbar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 90px;
+    top: 0;
+    right: -250px;
+    background-color: rgba(138, 108, 58, 0.8);
+    color: #F5F5DC;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    transition: right 0.3s ease-in-out;
+}
+
+.side-navbar.active {
+    right: 0;
+}
+
+.close-btn {
+    background: none;
+    color: #272725;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+}
+
+.dropdown-menu {
+    background-color: #8A6B45;
+    color: #F5F5DC;
+    text-align: center;
+}
+
+.dropdown-item {
+    color: #F5F5DC;
+}
+
+.dropdown-item:hover {
+    color: #272725;
+    background-color: #ad916e;
+}
+
+.nav-item:hover {
+    color: #272725;
+}
+
+.nav-item.active {
+    color: #272725;
+}
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 108, 58, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+.search-box {
+    background: #F5F5DC;
+    padding: 15px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.search-box button {
+    background-color: #8A6B45;
+    color: #F7E1C6;
+}
+
+.search-box button:hover {
+    background-color: #ad916e;
+    color: #272725;
+}
+
+#productContainer {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 120px;
+    color: #35351f;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.product-card {
+    margin: 10px;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .hover-image {
+    opacity: 1;
+}
+
+.product-card:hover .front-image {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-link {
+        font-weight: 200;
+    }
+
+    .ms-auto {
+        font-size: 1rem;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .me-auto {
+        display: none !important;
+    }
+
+    .side-navbar.active {
+        margin-top: 70px;
+        height: 90%;
+    }
+
+    h2 {
+        margin-top: 200px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+footer {
+    background-color: #1A1A1A;
+    color: wheat;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-container h4 {
+    color: #8A6B45;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: wheat;
+}
+
+.footer-links a,
+.footer-social {
+    color: wheat;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    flex-direction: column;
+}
+
+.footer-links,
+.footer-social {
+    gap: 15px;
+    display: flex;
+}
+
+.footer-links a:hover,
+.footer-social:hover {
+    color: #DE9F7C;
+}

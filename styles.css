@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FAEFE3;
+}
+
+header {
+    background-color: #8A6B45;
+    justify-content: center;
+}
+
+.navbar {
+    backdrop-filter: blur(10px);
+    font-weight: 300;
+}
+
+.navbar-brand h1 {
+    color: #F5F5DC;
+    font-size: 3rem;
+}
+
+.nav-link {
+    color: #F5F5DC;
+    font-weight: 400;
+}
+
+.me-auto {
+    font-size: 1.5rem;
+}
+
+.ms-auto {
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: #272725;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.navbar i {
+    color: #F5F5DC;
+}
+
+.navbar i:hover {
+    color: #1A1A1A;
+}
+
+#menuBtn {
+    color: white;
+}
+
+.side-navbar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 90px;
+    top: 0;
+    right: -250px;
+    background-color: rgba(138, 108, 58, 0.8);
+    color: #F5F5DC;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    transition: right 0.3s ease-in-out;
+}
+
+.side-navbar.active {
+    right: 0;
+}
+
+.close-btn {
+    background: none;
+    color: #272725;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+}
+
+.dropdown-menu {
+    background-color: #8A6B45;
+    color: #F5F5DC;
+    text-align: center;
+}
+
+.dropdown-item {
+    color: #F5F5DC;
+}
+
+.dropdown-item:hover {
+    color: #272725;
+    background-color: #ad916e;
+}
+
+.nav-item:hover {
+    color: #272725;
+}
+
+.nav-item.active {
+    color: #272725;
+}
+
+/* CONTACT FORM SECTION */
+.contact-form {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8A6B45;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #8A6B45;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #80503a;
+}
+
+footer {
+    background-color: #1A1A1A;
+    color: wheat;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-container h4 {
+    color: #8A6B45;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+}
+
+.footer-links a,
+.footer-social {
+    color: wheat;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    flex-direction: column;
+}
+
+.footer-links,
+.footer-social {
+    gap: 15px;
+    display: flex;
+}
+
+.footer-links a:hover,
+.footer-social:hover {
+    color: #DE9F7C;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links,
+    .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-form {
+        margin: 20px;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .navbar-brand h1 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-link {
+        font-weight: 200;
+    }
+    
+    .ms-auto {
+        font-size: 1rem;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .me-auto {
+        display: none !important;
+    }
+
+    .side-navbar.active {
+        margin-top: 70px;
+        height: 90%;
+    }
+
+    .contact-form {
+        margin-top: 300px;
+    }
+}
